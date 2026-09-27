@@ -6,6 +6,8 @@
   <title>Executive Briefing: Next-Gen Enterprise Accounting Platform</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js for Authentic Dashboard Visuals -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,10 +57,10 @@
     }
   </style>
 </head>
-<body class="bg-[#0b0f19] text-slate-100 flex flex-col justify-between min-h-screen selection:bg-brand selection:text-white antialiased custom-scrollbar">
+<body class="bg-[#0a0d14] text-slate-100 flex flex-col justify-between min-h-screen selection:bg-brand selection:text-white antialiased custom-scrollbar">
 
   <!-- TOP EXECUTIVE NAVIGATION BAR -->
-  <header class="border-b border-slate-800/90 bg-[#111827]/90 backdrop-blur-md px-6 py-3.5 flex items-center justify-between sticky top-0 z-50 shadow-md">
+  <header class="border-b border-slate-800/90 bg-[#111827]/95 backdrop-blur-md px-6 py-3.5 flex items-center justify-between sticky top-0 z-50 shadow-md">
     <div class="flex items-center gap-3.5">
       <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-700 via-brand to-rose-400 flex items-center justify-center font-extrabold text-white text-sm tracking-wider shadow-lg shadow-brand/30">
         ₹
@@ -66,7 +68,7 @@
       <div>
         <div class="flex items-center gap-2">
           <h1 class="text-xs font-bold uppercase tracking-wider text-slate-100 headline">Executive Briefing</h1>
-          <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand/15 text-brand-300 font-semibold border border-brand/30">Strategic Proposal</span>
+          <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand/15 text-brand-300 font-semibold border border-brand/30">Platform Proposal</span>
         </div>
         <p class="text-[11px] text-slate-400">Next-Generation Multi-Branch Accounting &amp; Real-Time Financial Governance</p>
       </div>
@@ -75,7 +77,7 @@
     <div class="flex items-center gap-4">
       <div class="flex items-center gap-1.5" id="slideDots"></div>
       <div class="text-xs font-bold text-slate-400 min-w-[55px] text-right font-mono">
-        <span id="currentSlideNum" class="text-brand">1</span> / <span id="totalSlideNum">6</span>
+        <span id="currentSlideNum" class="text-brand">1</span> / <span id="totalSlideNum">5</span>
       </div>
       <button id="fullscreenBtn" title="Toggle Fullscreen" class="p-2 rounded-lg border border-slate-800 bg-[#1f2937]/60 hover:bg-[#1f2937] text-slate-400 hover:text-white transition text-xs">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
@@ -84,7 +86,7 @@
   </header>
 
   <!-- MAIN PRESENTATION CANVAS -->
-  <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 py-5 flex-1 flex flex-col justify-center">
+  <main class="max-w-7xl w-full mx-auto px-3 sm:px-6 py-4 flex-1 flex flex-col justify-center">
 
     <!-- SLIDE 1: STRATEGIC VISION & CORE IMPACT -->
     <section class="slide active flex-col justify-center items-center text-center py-2">
@@ -479,156 +481,355 @@
       </div>
     </section>
 
-    <!-- SLIDE 5: EXECUTIVE COCKPIT & LIVE DASHBOARD MOCKUP -->
-    <section class="slide flex-col justify-center py-2">
-      <div class="text-center max-w-xl mx-auto mb-4">
-        <span class="text-brand text-xs font-bold uppercase tracking-wider">Executive Cockpit</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white headline mt-1">Real-Time Financial Dashboard</h2>
-        <p class="text-slate-400 text-xs mt-0.5">Live snapshot of total company position in Indian Rupees (₹).</p>
-      </div>
-
-      <!-- MOCKUP CONTAINER -->
-      <div class="max-w-4xl mx-auto w-full p-4 rounded-2xl border border-slate-800 bg-[#111827]/90 shadow-2xl">
-        <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
+    <!-- SLIDE 5: LIVING WEB INTERFACE & ANALYTICS COCKPIT -->
+    <section class="slide flex-col justify-center py-1">
+      <div class="max-w-6xl mx-auto w-full">
+        
+        <!-- Header Ribbon for Slide Context -->
+        <div class="flex items-center justify-between mb-2">
+          <div>
+            <span class="inline-flex items-center gap-1.5 text-brand text-xs font-bold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+              Live Interactive Prototype
+            </span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white headline">Web Application Cockpit: Owner View</h2>
+          </div>
           <div class="flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span class="text-xs font-bold text-slate-200">Company Overview • Kolkata, Mumbai &amp; Delhi Consolidated Live</span>
-          </div>
-          <span class="text-[11px] text-slate-400">Refreshed 2 sec ago • Live INR</span>
-        </div>
-
-        <!-- 4 Top KPI Cards in INR -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-          <div class="p-3 rounded-xl bg-[#0b0f19] border border-slate-800/80">
-            <div class="text-[10px] uppercase font-bold text-slate-400">Today's Collections</div>
-            <div class="text-lg font-black text-white mt-0.5">₹12,45,000</div>
-            <div class="text-[10px] text-emerald-400 font-semibold mt-0.5">↑ 18% vs yesterday</div>
-          </div>
-          <div class="p-3 rounded-xl bg-[#0b0f19] border border-slate-800/80">
-            <div class="text-[10px] uppercase font-bold text-slate-400">Total Receivables</div>
-            <div class="text-lg font-black text-amber-400 mt-0.5">₹48,20,000</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">₹8.5L overdue (&gt;45 days)</div>
-          </div>
-          <div class="p-3 rounded-xl bg-[#0b0f19] border border-slate-800/80">
-            <div class="text-[10px] uppercase font-bold text-slate-400">Current Cash &amp; Bank</div>
-            <div class="text-lg font-black text-emerald-400 mt-0.5">₹92,80,000</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">Across 4 current accts</div>
-          </div>
-          <div class="p-3 rounded-xl bg-[#0b0f19] border border-brand/40">
-            <div class="text-[10px] uppercase font-bold text-brand-300">Pending Approvals</div>
-            <div class="text-lg font-black text-brand mt-0.5">₹4,85,000</div>
-            <div class="text-[10px] text-brand-300 mt-0.5">2 high-value POs waiting</div>
+            <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-bold text-emerald-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Live Cloud Connected
+            </span>
+            <div class="text-[11px] text-slate-400 bg-slate-900 border border-slate-800 px-2 py-1 rounded">
+              Standard Currency: <span class="font-bold text-white">₹ INR</span>
+            </div>
           </div>
         </div>
 
-        <!-- Bottom Grid: Live Branch Breakdown & AI Guardrail Alerts -->
-        <div class="grid md:grid-cols-2 gap-3 text-xs">
-          <!-- Branch Performance in INR -->
-          <div class="p-3.5 rounded-xl bg-[#0b0f19] border border-slate-800/80">
-            <div class="font-bold text-white mb-2 flex items-center justify-between">
-              <span>Branch Revenue Today</span>
-              <span class="text-[10px] text-brand font-semibold">Zero File Sync Delays</span>
-            </div>
-            <div class="space-y-2.5">
-              <div class="flex items-center justify-between text-slate-300">
-                <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Kolkata Central Warehouse</span>
-                <span class="font-bold text-white">₹6,20,000</span>
-              </div>
-              <div class="flex items-center justify-between text-slate-300">
-                <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Mumbai Wholesale Hub</span>
-                <span class="font-bold text-white">₹4,15,000</span>
-              </div>
-              <div class="flex items-center justify-between text-slate-300">
-                <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Delhi Regional Office</span>
-                <span class="font-bold text-white">₹2,10,000</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- AI Guardrail & Approval Action Queue -->
-          <div class="p-3.5 rounded-xl bg-[#0b0f19] border border-slate-800/80">
-            <div class="font-bold text-white mb-2 flex items-center justify-between">
-              <span>AI Shield &amp; Approval Queue</span>
-              <span class="text-[10px] text-emerald-400 font-semibold">Active Protection</span>
-            </div>
-            <div class="space-y-2">
-              <div class="p-2 rounded-lg bg-brand/10 border border-brand/30 flex items-center justify-between">
-                <div>
-                  <div class="text-[11px] font-bold text-brand-300">Duplicate Bill Blocked (₹2,50,000)</div>
-                  <div class="text-[10px] text-slate-400">Vendor: Sharma Steels • Same bill submitted in Mumbai 10 days ago</div>
+        <!-- ================= REAL WEB APP SHELL CONTAINER ================= -->
+        <div class="rounded-2xl border border-slate-800 bg-[#0f1422] shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[580px]">
+          
+          <!-- LEFT SIDEBAR -->
+          <aside class="w-full md:w-56 bg-[#0b0e17] border-b md:border-b-0 md:border-r border-slate-800 flex flex-col justify-between p-3.5 select-none">
+            <div>
+              <!-- App Brand -->
+              <div class="flex items-center gap-2.5 px-2 py-2 mb-4 border-b border-slate-800/80">
+                <div class="w-7 h-7 rounded-lg bg-brand flex items-center justify-center text-white font-extrabold text-xs shadow-md shadow-brand/40">
+                  ₹
                 </div>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-brand text-white font-bold uppercase">Stopped</span>
-              </div>
-              <div class="p-2 rounded-lg bg-[#1f2937]/60 border border-slate-800 flex items-center justify-between">
                 <div>
-                  <div class="text-[11px] font-bold text-slate-200">PO #8841 Exceeds Limit (₹2,35,000)</div>
-                  <div class="text-[10px] text-slate-400">Kolkata Warehouse • Awaiting Owner Sign-Off</div>
+                  <div class="text-xs font-black text-white headline tracking-wide">ENTERPRISE<span class="text-brand">ONE</span></div>
+                  <div class="text-[9px] text-slate-400 uppercase font-semibold">Financial Core OS</div>
                 </div>
-                <button class="text-[10px] px-2.5 py-1 rounded bg-brand text-white font-bold hover:bg-brand-600 transition shadow-sm">Authorize</button>
               </div>
+
+              <!-- Navigation Menu Links -->
+              <nav class="space-y-1 text-xs">
+                <button class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg bg-brand/15 text-brand-300 font-bold border border-brand/30 transition text-left">
+                  <svg class="w-4 h-4 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                  <span>Dashboard</span>
+                </button>
+                <button class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/50 transition text-left">
+                  <div class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span>Vouchers &amp; Sales</span>
+                  </div>
+                  <span class="text-[9px] bg-slate-800 px-1.5 py-0.5 rounded text-slate-400 font-mono">F8</span>
+                </button>
+                <button class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/50 transition text-left">
+                  <div class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                    <span>Purchases &amp; Bills</span>
+                  </div>
+                  <span class="text-[9px] bg-slate-800 px-1.5 py-0.5 rounded text-slate-400 font-mono">F9</span>
+                </button>
+                <button class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/50 transition text-left">
+                  <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+                  <span>Banking &amp; Cash</span>
+                </button>
+                <button class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/50 transition text-left">
+                  <div class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    <span>Multi-Branch Rollup</span>
+                  </div>
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                </button>
+                <button class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/50 transition text-left">
+                  <div class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    <span>AI Fraud Shield</span>
+                  </div>
+                  <span class="text-[9px] bg-brand text-white px-1.5 py-0.2 rounded-full font-bold">1 Alert</span>
+                </button>
+                <button class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/50 transition text-left">
+                  <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  <span>Statutory &amp; GST</span>
+                </button>
+              </nav>
+            </div>
+
+            <!-- Operator Fast Hotkey Badge -->
+            <div class="mt-4 p-2.5 rounded-xl bg-[#141b2d] border border-slate-800 text-[10px] text-slate-400">
+              <div class="text-white font-bold flex items-center justify-between mb-1">
+                <span>Fast Entry Active</span>
+                <span class="text-emerald-400 font-mono text-[9px]">READY</span>
+              </div>
+              <p class="leading-tight">Press <kbd class="px-1 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700 font-mono">Alt+V</kbd> to record a voucher instantly.</p>
+            </div>
+          </aside>
+
+          <!-- MAIN COCKPIT VIEWPORT -->
+          <div class="flex-1 flex flex-col bg-[#0f1422] overflow-y-auto custom-scrollbar">
+            
+            <!-- COCKPIT TOPBAR -->
+            <header class="h-14 px-4 border-b border-slate-800 bg-[#121829] flex items-center justify-between gap-3">
+              <!-- Search Bar with Shortcut -->
+              <div class="flex items-center gap-2 max-w-sm w-full bg-[#0b0e17] border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-slate-400">
+                <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <input type="text" placeholder="Search customer, invoice, ledger..." class="bg-transparent border-none outline-none w-full text-slate-200 placeholder-slate-600 text-xs" />
+                <kbd class="hidden sm:inline-block px-1.5 py-0.5 rounded bg-slate-800 text-[10px] text-slate-400 font-mono border border-slate-700">Ctrl+K</kbd>
+              </div>
+
+              <!-- Branch Switcher, Notification & Profile -->
+              <div class="flex items-center gap-3">
+                <!-- Multi-Branch Selector -->
+                <div class="flex items-center gap-1.5 bg-[#0b0e17] border border-slate-800 rounded-lg px-2.5 py-1 text-xs">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <select id="branchSelector" class="bg-transparent text-white font-bold text-xs outline-none cursor-pointer">
+                    <option value="all" class="bg-[#111827] text-white">All India Consolidated</option>
+                    <option value="kolkata" class="bg-[#111827] text-white">Kolkata Central Hub</option>
+                    <option value="mumbai" class="bg-[#111827] text-white">Mumbai Regional Branch</option>
+                    <option value="delhi" class="bg-[#111827] text-white">Delhi Commercial Office</option>
+                  </select>
+                </div>
+
+                <!-- Alert Bell -->
+                <button class="relative p-2 rounded-lg bg-[#0b0e17] border border-slate-800 text-slate-400 hover:text-white transition">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+                  <span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-brand"></span>
+                </button>
+
+                <!-- User Profile -->
+                <div class="flex items-center gap-2 pl-2 border-l border-slate-800">
+                  <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-brand to-rose-400 flex items-center justify-center font-bold text-white text-xs shadow-sm">
+                    MD
+                  </div>
+                  <div class="hidden sm:block text-left">
+                    <div class="text-[11px] font-bold text-white leading-tight">Managing Director</div>
+                    <div class="text-[9px] text-emerald-400 font-semibold">Owner Level Access</div>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <!-- COCKPIT CONTENT AREA -->
+            <div class="p-4 space-y-4">
+              
+              <!-- AI Radar Warning Banner -->
+              <div id="aiWarningBanner" class="p-3 rounded-xl border border-brand/40 bg-brand/10 flex items-center justify-between gap-3 text-xs transition">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-brand/20 text-brand flex items-center justify-center font-bold text-base shrink-0">
+                    🛡️
+                  </div>
+                  <div>
+                    <div class="font-bold text-white flex items-center gap-2">
+                      <span>AI Duplicate Guard Interception: Vendor Invoice #ST-9941</span>
+                      <span class="text-[9px] px-2 py-0.5 rounded bg-brand text-white font-extrabold uppercase">Payout Blocked</span>
+                    </div>
+                    <div class="text-slate-300 text-[11px]">
+                      A ₹2,50,000 bill from <strong>Sharma Steels</strong> matches a voucher already settled in Mumbai 10 days ago.
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <button onclick="dismissAlert('inspected')" class="px-3 py-1.5 rounded-lg bg-[#0b0e17] border border-slate-700 hover:border-slate-500 text-white font-semibold text-[11px] transition">
+                    Inspect Match
+                  </button>
+                  <button onclick="dismissAlert('rejected')" class="px-3 py-1.5 rounded-lg bg-brand hover:bg-brand-600 text-white font-bold text-[11px] transition shadow-md shadow-brand/30">
+                    Reject Voucher
+                  </button>
+                </div>
+              </div>
+
+              <!-- 4 PRIMARY KPI CARDS IN INR -->
+              <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                <div class="p-3.5 rounded-xl border border-slate-800 bg-[#121829] relative overflow-hidden">
+                  <div class="flex items-center justify-between text-slate-400 text-[11px] font-semibold">
+                    <span>Total Net Revenue (MTD)</span>
+                    <span class="text-emerald-400 text-[10px] font-bold">↑ 22.4%</span>
+                  </div>
+                  <div class="text-xl font-black text-white headline mt-1" id="kpiRevenue">₹1,48,50,000</div>
+                  <div class="text-[10px] text-slate-500 mt-0.5">Across all 3 regional hubs</div>
+                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-400"></div>
+                </div>
+
+                <div class="p-3.5 rounded-xl border border-slate-800 bg-[#121829] relative overflow-hidden">
+                  <div class="flex items-center justify-between text-slate-400 text-[11px] font-semibold">
+                    <span>Live Cash &amp; Bank Vault</span>
+                    <span class="text-emerald-400 text-[10px] font-bold">Verified</span>
+                  </div>
+                  <div class="text-xl font-black text-emerald-400 headline mt-1" id="kpiCash">₹34,20,000</div>
+                  <div class="text-[10px] text-slate-500 mt-0.5">HDFC + ICICI Current Accts</div>
+                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-300"></div>
+                </div>
+
+                <div class="p-3.5 rounded-xl border border-slate-800 bg-[#121829] relative overflow-hidden">
+                  <div class="flex items-center justify-between text-slate-400 text-[11px] font-semibold">
+                    <span>Receivables Outstanding</span>
+                    <span class="text-amber-400 text-[10px] font-bold">₹8.2L Overdue</span>
+                  </div>
+                  <div class="text-xl font-black text-amber-400 headline mt-1" id="kpiReceivables">₹52,80,000</div>
+                  <div class="text-[10px] text-slate-500 mt-0.5">Weighted avg: 26 credit days</div>
+                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-amber-300"></div>
+                </div>
+
+                <div class="p-3.5 rounded-xl border border-brand/50 bg-[#121829] relative overflow-hidden">
+                  <div class="flex items-center justify-between text-brand-300 text-[11px] font-semibold">
+                    <span>Pending Approvals</span>
+                    <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+                  </div>
+                  <div class="text-xl font-black text-brand headline mt-1" id="kpiApprovals">3 Vouchers</div>
+                  <div class="text-[10px] text-brand-300 font-medium mt-0.5">Total Value: ₹4,85,000</div>
+                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-brand"></div>
+                </div>
+              </div>
+
+              <!-- REAL CHART.JS ANALYTICS SUITE (2 CARDS) -->
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+                
+                <!-- Main Trend Chart (2 Cols) -->
+                <div class="lg:col-span-2 p-4 rounded-xl border border-slate-800 bg-[#121829] flex flex-col justify-between">
+                  <div class="flex items-center justify-between mb-2">
+                    <div>
+                      <h3 class="text-xs font-bold text-white">Monthly Sales Revenue vs Cash Collection</h3>
+                      <p class="text-[11px] text-slate-400">All amounts computed in ₹ Lakhs</p>
+                    </div>
+                    <div class="flex items-center gap-1 bg-[#0b0e17] border border-slate-800 p-0.5 rounded text-[10px]">
+                      <button id="btnTrend6M" class="px-2 py-0.5 rounded font-bold text-white bg-brand transition">6 Months</button>
+                      <button id="btnTrend1Y" class="px-2 py-0.5 rounded text-slate-400 hover:text-white transition">12 Months</button>
+                    </div>
+                  </div>
+                  <div class="h-52 w-full relative">
+                    <canvas id="revenueTrendChart"></canvas>
+                  </div>
+                </div>
+
+                <!-- Doughnut Chart (1 Col) -->
+                <div class="p-4 rounded-xl border border-slate-800 bg-[#121829] flex flex-col justify-between">
+                  <div class="flex items-center justify-between mb-2">
+                    <div>
+                      <h3 class="text-xs font-bold text-white">Branch Revenue Share</h3>
+                      <p class="text-[11px] text-slate-400">Real-time consolidated mix</p>
+                    </div>
+                    <span class="text-[10px] font-mono text-emerald-400 font-bold">100% Synced</span>
+                  </div>
+                  <div class="h-44 w-full relative flex items-center justify-center">
+                    <canvas id="branchShareChart"></canvas>
+                  </div>
+                  <div class="grid grid-cols-3 gap-1 pt-2 border-t border-slate-800/80 text-[10px] text-center">
+                    <div>
+                      <div class="text-slate-400">Kolkata</div>
+                      <div class="font-bold text-white">₹72.8L (49%)</div>
+                    </div>
+                    <div>
+                      <div class="text-slate-400">Mumbai</div>
+                      <div class="font-bold text-white">₹47.5L (32%)</div>
+                    </div>
+                    <div>
+                      <div class="text-slate-400">Delhi</div>
+                      <div class="font-bold text-white">₹28.2L (19%)</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- LIVE ACTION FEED & HIERARCHICAL APPROVAL RADAR TABLE -->
+              <div class="p-4 rounded-xl border border-slate-800 bg-[#121829]">
+                <div class="flex items-center justify-between pb-2.5 border-b border-slate-800 mb-3">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-brand"></span>
+                    <h3 class="text-xs font-bold text-white">Owner Authorization Queue (Transactions &gt; ₹50,000)</h3>
+                  </div>
+                  <span class="text-[11px] text-slate-400 font-medium">1-Click Mobile Approval Enabled</span>
+                </div>
+
+                <div class="overflow-x-auto">
+                  <table class="w-full text-left text-xs">
+                    <thead>
+                      <tr class="text-slate-400 border-b border-slate-800/70 text-[10px] uppercase font-semibold">
+                        <th class="pb-2">Voucher / ID</th>
+                        <th class="pb-2">Party / Vendor</th>
+                        <th class="pb-2">Branch</th>
+                        <th class="pb-2">Amount (₹)</th>
+                        <th class="pb-2">Risk / Guardrail Status</th>
+                        <th class="pb-2 text-right">Owner Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/50 text-[11px]" id="approvalTableBody">
+                      <tr id="row1">
+                        <td class="py-2.5 font-mono text-slate-300">#PO-8841</td>
+                        <td class="py-2.5 font-bold text-white">Apex Raw Materials Pvt Ltd</td>
+                        <td class="py-2.5 text-slate-300">Kolkata Hub</td>
+                        <td class="py-2.5 font-black text-amber-400 font-mono">₹2,35,000</td>
+                        <td class="py-2.5">
+                          <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px] font-semibold border border-amber-500/30">
+                            Exceeds ₹1.0L Limit
+                          </span>
+                        </td>
+                        <td class="py-2.5 text-right">
+                          <button onclick="approveRow('row1', '₹2,35,000')" class="px-2.5 py-1 rounded bg-brand hover:bg-brand-600 text-white font-bold text-[10px] transition shadow-sm">
+                            Approve
+                          </button>
+                        </td>
+                      </tr>
+                      <tr id="row2">
+                        <td class="py-2.5 font-mono text-slate-300">#INV-4109</td>
+                        <td class="py-2.5 font-bold text-white">National Transport Cargo</td>
+                        <td class="py-2.5 text-slate-300">Mumbai Branch</td>
+                        <td class="py-2.5 font-black text-white font-mono">₹85,000</td>
+                        <td class="py-2.5">
+                          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-semibold border border-emerald-500/30">
+                            Verified PO Match
+                          </span>
+                        </td>
+                        <td class="py-2.5 text-right">
+                          <button onclick="approveRow('row2', '₹85,000')" class="px-2.5 py-1 rounded bg-brand hover:bg-brand-600 text-white font-bold text-[10px] transition shadow-sm">
+                            Approve
+                          </button>
+                        </td>
+                      </tr>
+                      <tr id="row3">
+                        <td class="py-2.5 font-mono text-slate-300">#PAY-1204</td>
+                        <td class="py-2.5 font-bold text-white">Industrial Precision Works</td>
+                        <td class="py-2.5 text-slate-300">Delhi Office</td>
+                        <td class="py-2.5 font-black text-amber-400 font-mono">₹1,65,000</td>
+                        <td class="py-2.5">
+                          <span class="px-2 py-0.5 rounded bg-brand/20 text-brand-300 text-[10px] font-semibold border border-brand/30">
+                            Cash Discount 6% (Target: 3%)
+                          </span>
+                        </td>
+                        <td class="py-2.5 text-right">
+                          <button onclick="approveRow('row3', '₹1,65,000')" class="px-2.5 py-1 rounded bg-brand hover:bg-brand-600 text-white font-bold text-[10px] transition shadow-sm">
+                            Authorize Discount
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
+        <!-- ================= END REAL WEB APP SHELL CONTAINER ================= -->
 
-      </div>
-    </section>
-
-    <!-- SLIDE 6: ROLLOUT ROADMAP & ROI -->
-    <section class="slide flex-col justify-center py-2 text-center">
-      <div class="max-w-xl mx-auto mb-6">
-        <span class="text-brand text-xs font-bold uppercase tracking-wider">Business Impact &amp; Timeline</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white headline mt-1">Zero-Disruption 4-Week Rollout</h2>
-        <p class="text-slate-400 text-xs mt-1">Structured implementation preserving daily billing speed throughout cutover.</p>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto w-full text-left mb-6">
-        <div class="p-4 rounded-xl border border-slate-800 bg-[#111827]/80">
-          <span class="text-[11px] font-bold text-brand">WEEK 1</span>
-          <div class="font-bold text-white text-xs mt-1">Master Ledger Migration</div>
-          <ul class="mt-2 space-y-1 text-[11px] text-slate-400">
-            <li>• <strong>Import existing ledgers</strong></li>
-            <li>• <strong>Zero balance discrepancy audit</strong></li>
-          </ul>
-        </div>
-        <div class="p-4 rounded-xl border border-slate-800 bg-[#111827]/80">
-          <span class="text-[11px] font-bold text-white">WEEK 2</span>
-          <div class="font-bold text-white text-xs mt-1">Keyboard Flow Validation</div>
-          <ul class="mt-2 space-y-1 text-[11px] text-slate-400">
-            <li>• <strong>Staff tests voucher speeds</strong></li>
-            <li>• <strong>Verify matching key hotkeys</strong></li>
-          </ul>
-        </div>
-        <div class="p-4 rounded-xl border border-slate-800 bg-[#111827]/80">
-          <span class="text-[11px] font-bold text-brand-300">WEEK 3</span>
-          <div class="font-bold text-white text-xs mt-1">Guardrail &amp; AI Activation</div>
-          <ul class="mt-2 space-y-1 text-[11px] text-slate-400">
-            <li>• <strong>Set spending approval limits</strong></li>
-            <li>• <strong>Turn on duplicate bill shield</strong></li>
-          </ul>
-        </div>
-        <div class="p-4 rounded-xl border border-slate-800 bg-[#111827]/80">
-          <span class="text-[11px] font-bold text-emerald-400">WEEK 4</span>
-          <div class="font-bold text-white text-xs mt-1">Safe Parallel Cutover</div>
-          <ul class="mt-2 space-y-1 text-[11px] text-slate-400">
-            <li>• <strong>Brief 48-hr dual verification</strong></li>
-            <li>• <strong>Full switch with zero downtime</strong></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="p-5 rounded-2xl border border-brand/40 bg-brand/5 max-w-lg mx-auto shadow-lg shadow-brand/5">
-        <h4 class="text-white text-sm font-bold">Suggested Executive Next Step</h4>
-        <p class="text-slate-400 text-xs mt-1 mb-3">Conduct a 15-minute hands-on test of keyboard entry speed and the mobile approval cockpit.</p>
-        <button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand hover:bg-brand-600 text-white text-xs font-bold transition shadow-lg shadow-brand/30 cursor-pointer">
-          Schedule 15-Minute Executive Walkthrough
-        </button>
       </div>
     </section>
 
   </main>
 
   <!-- BOTTOM NAVIGATION BAR -->
-  <footer class="border-t border-slate-800/90 bg-[#111827]/90 px-6 py-3 flex items-center justify-between">
+  <footer class="border-t border-slate-800/90 bg-[#111827]/95 px-6 py-3 flex items-center justify-between">
     <div class="text-xs text-slate-500 hidden sm:block">
       Navigate with <kbd class="px-1.5 py-0.5 bg-[#1f2937] rounded text-slate-300 font-mono text-[11px] border border-slate-700">←</kbd> and <kbd class="px-1.5 py-0.5 bg-[#1f2937] rounded text-slate-300 font-mono text-[11px] border border-slate-700">→</kbd> keys
     </div>
@@ -680,6 +881,11 @@
 
       prevBtn.disabled = index === 0;
       nextBtn.disabled = index === slides.length - 1;
+
+      // Lazy-trigger chart re-draw when navigating to dashboard slide (index 4)
+      if (index === 4) {
+        initDashboardCharts();
+      }
     }
 
     prevBtn.addEventListener('click', () => {
@@ -691,6 +897,7 @@
     });
 
     document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
       if (e.key === 'ArrowRight' || e.key === ' ') {
         if (currentIndex < slides.length - 1) updateSlide(currentIndex + 1);
       } else if (e.key === 'ArrowLeft') {
@@ -789,6 +996,195 @@
       });
     }
 
+    let trendChartInstance = null;
+    let shareChartInstance = null;
+
+    function initDashboardCharts() {
+      if (trendChartInstance && shareChartInstance) return; // Already rendered
+
+      const ctxTrend = document.getElementById('revenueTrendChart')?.getContext('2d');
+      const ctxShare = document.getElementById('branchShareChart')?.getContext('2d');
+
+      if (ctxTrend) {
+        trendChartInstance = new Chart(ctxTrend, {
+          type: 'line',
+          data: {
+            labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+            datasets: [
+              {
+                label: 'Billed Revenue (₹ Lakhs)',
+                data: [105, 118, 122, 134, 142, 148.5],
+                borderColor: '#dc3545',
+                backgroundColor: 'rgba(220, 53, 69, 0.12)',
+                tension: 0.35,
+                fill: true,
+                pointBackgroundColor: '#dc3545',
+                pointRadius: 4
+              },
+              {
+                label: 'Bank Collections (₹ Lakhs)',
+                data: [98, 112, 115, 129, 138, 144.2],
+                borderColor: '#10b981',
+                borderDash: [5, 5],
+                tension: 0.35,
+                fill: false,
+                pointBackgroundColor: '#10b981',
+                pointRadius: 3
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                labels: { color: '#94a3b8', font: { size: 10, family: 'Plus Jakarta Sans' } }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return `${context.dataset.label}: ₹${context.parsed.y} Lakhs`;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                grid: { color: 'rgba(51, 65, 85, 0.25)' },
+                ticks: { color: '#94a3b8', font: { size: 10 } }
+              },
+              y: {
+                grid: { color: 'rgba(51, 65, 85, 0.25)' },
+                ticks: {
+                  color: '#94a3b8',
+                  font: { size: 10 },
+                  callback: (val) => '₹' + val + 'L'
+                }
+              }
+            }
+          }
+        });
+      }
+
+      if (ctxShare) {
+        shareChartInstance = new Chart(ctxShare, {
+          type: 'doughnut',
+          data: {
+            labels: ['Kolkata Hub', 'Mumbai Branch', 'Delhi Office'],
+            datasets: [{
+              data: [72.8, 47.5, 28.2],
+              backgroundColor: ['#dc3545', '#f1747d', '#1e293b'],
+              borderColor: '#0f1422',
+              borderWidth: 3,
+              hoverOffset: 4
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return `${context.label}: ₹${context.raw} Lakhs`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    // Toggle 6M / 1Y Data in Trend Chart
+    const btnTrend6M = document.getElementById('btnTrend6M');
+    const btnTrend1Y = document.getElementById('btnTrend1Y');
+
+    if (btnTrend6M && btnTrend1Y) {
+      btnTrend6M.addEventListener('click', () => {
+        btnTrend6M.className = "px-2 py-0.5 rounded font-bold text-white bg-brand transition";
+        btnTrend1Y.className = "px-2 py-0.5 rounded text-slate-400 hover:text-white transition";
+        if (trendChartInstance) {
+          trendChartInstance.data.labels = ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'];
+          trendChartInstance.data.datasets[0].data = [105, 118, 122, 134, 142, 148.5];
+          trendChartInstance.data.datasets[1].data = [98, 112, 115, 129, 138, 144.2];
+          trendChartInstance.update();
+        }
+      });
+
+      btnTrend1Y.addEventListener('click', () => {
+        btnTrend1Y.className = "px-2 py-0.5 rounded font-bold text-white bg-brand transition";
+        btnTrend6M.className = "px-2 py-0.5 rounded text-slate-400 hover:text-white transition";
+        if (trendChartInstance) {
+          trendChartInstance.data.labels = ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'];
+          trendChartInstance.data.datasets[0].data = [88, 92, 95, 102, 110, 108, 105, 118, 122, 134, 142, 148.5];
+          trendChartInstance.data.datasets[1].data = [80, 85, 90, 96, 105, 102, 98, 112, 115, 129, 138, 144.2];
+          trendChartInstance.update();
+        }
+      });
+    }
+
+    // Multi-branch selector interaction to dynamically update numbers
+    const branchSelector = document.getElementById('branchSelector');
+    if (branchSelector) {
+      branchSelector.addEventListener('change', (e) => {
+        const val = e.target.value;
+        const revEl = document.getElementById('kpiRevenue');
+        const cashEl = document.getElementById('kpiCash');
+        const recEl = document.getElementById('kpiReceivables');
+
+        if (val === 'kolkata') {
+          revEl.textContent = '₹72,80,000';
+          cashEl.textContent = '₹18,50,000';
+          recEl.textContent = '₹24,10,000';
+        } else if (val === 'mumbai') {
+          revEl.textContent = '₹47,50,000';
+          cashEl.textContent = '₹11,40,000';
+          recEl.textContent = '₹18,30,000';
+        } else if (val === 'delhi') {
+          revEl.textContent = '₹28,20,000';
+          cashEl.textContent = '₹4,30,000';
+          recEl.textContent = '₹10,40,000';
+        } else {
+          revEl.textContent = '₹1,48,50,000';
+          cashEl.textContent = '₹34,20,000';
+          recEl.textContent = '₹52,80,000';
+        }
+      });
+    }
+
+    // Dismiss AI Warning Banner
+    function dismissAlert(action) {
+      const banner = document.getElementById('aiWarningBanner');
+      if (banner) {
+        banner.style.opacity = '0';
+        banner.style.transform = 'translateY(-10px)';
+        setTimeout(() => {
+          banner.remove();
+        }, 200);
+      }
+    }
+
+    // 1-Click Approval action in table
+    function approveRow(rowId, amount) {
+      const row = document.getElementById(rowId);
+      if (row) {
+        row.innerHTML = `
+          <td colspan="6" class="py-2.5 px-3 bg-emerald-950/40 border border-emerald-800/40 rounded-lg text-emerald-400 font-bold text-[11px]">
+            ✓ Approved ${amount} by Managing Director — Instantly sealed in Central Cloud Vault.
+          </td>
+        `;
+        setTimeout(() => {
+          row.style.transition = 'all 0.5s ease';
+          row.style.opacity = '0';
+          setTimeout(() => row.remove(), 500);
+        }, 1500);
+      }
+    }
+
+    // Initial render setup
     updateSlide(0);
   </script>
 </body>
