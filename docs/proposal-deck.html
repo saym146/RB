@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Brief: Next-Generation Business Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .headline {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .slide {
+      display: none;
+      min-height: calc(100vh - 125px);
+    }
+    .slide.active {
+      display: flex;
+      animation: fadeIn 0.25s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col justify-between min-h-screen selection:bg-indigo-600 selection:text-white antialiased">
+
+  <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur px-6 py-3 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white text-xs tracking-wider shadow">
+        ERP
+      </div>
+      <div>
+        <h1 class="text-xs font-bold uppercase tracking-wider text-slate-200 headline">Executive Decision Brief</h1>
+        <p class="text-[11px] text-slate-400">Next-Gen Accounting &amp; Business Control Platform</p>
+      </div>
+    </div>
+    
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-1.5" id="slideDots"></div>
+      <div class="text-xs font-bold text-slate-400">
+        <span id="currentSlideNum" class="text-indigo-400">1</span> / <span id="totalSlideNum">5</span>
+      </div>
+      <button id="fullscreenBtn" title="Toggle Fullscreen" class="p-1.5 rounded-lg border border-slate-800 bg-slate-900 hover:bg-slate-800 text-slate-400 text-xs">
+        ⛶
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-5xl w-full mx-auto px-6 py-6 flex-1 flex flex-col justify-center">
+
+    <!-- SLIDE 1: Executive Hook -->
+    <section class="slide active flex-col justify-center items-center text-center py-2">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-bold mb-4">
+        ✦ Modern Growth Platform
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight headline leading-tight max-w-3xl">
+        Faster Entry. Zero Data Loss.<br/>Total Financial Control.
+      </h2>
+      <p class="text-slate-400 text-sm max-w-xl mt-3">
+        Replacing legacy accounting bottlenecks with bank-grade safety, multi-branch visibility, and zero training friction.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 w-full max-w-3xl text-left">
+        <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/70">
+          <div class="text-2xl font-black text-emerald-400">0%</div>
+          <div class="text-xs font-bold text-white mt-1">Data Corruption</div>
+          <div class="text-slate-400 text-[11px] mt-0.5">Crash-proof records</div>
+        </div>
+        <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/70">
+          <div class="text-2xl font-black text-cyan-400">Instant</div>
+          <div class="text-xs font-bold text-white mt-1">Report Speeds</div>
+          <div class="text-slate-400 text-[11px] mt-0.5">Zero loading delay</div>
+        </div>
+        <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/70">
+          <div class="text-2xl font-black text-indigo-400">100%</div>
+          <div class="text-xs font-bold text-white mt-1">Multi-Branch Sync</div>
+          <div class="text-slate-400 text-[11px] mt-0.5">Real-time consolidated P&amp;L</div>
+        </div>
+        <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/70">
+          <div class="text-2xl font-black text-amber-400">24 / 7</div>
+          <div class="text-xs font-bold text-white mt-1">Fraud Guard</div>
+          <div class="text-slate-400 text-[11px] mt-0.5">AI catches duplicate bills</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: Direct Comparison -->
+    <section class="slide flex-col justify-center py-2">
+      <div class="text-center max-w-xl mx-auto mb-6">
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">The Strategic Choice</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white headline mt-1">Tally Prime vs. Next-Gen Platform</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto w-full">
+        <!-- Legacy Side -->
+        <div class="p-6 rounded-2xl border border-rose-900/40 bg-rose-950/10">
+          <div class="flex items-center justify-between pb-3 border-b border-rose-900/30 mb-4">
+            <span class="text-sm font-bold text-rose-400">Current Setup (Tally Prime)</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-rose-900/40 text-rose-300 font-bold uppercase">Risks</span>
+          </div>
+          <ul class="space-y-4 text-xs text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <span class="text-rose-400 font-bold">✕</span>
+              <span><strong>Frequent File Corruption:</strong> Power cuts or sudden network drops corrupt company data files.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-rose-400 font-bold">✕</span>
+              <span><strong>User Freezes:</strong> Multiple operators entering data at the same time cause system slowdowns and locks.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-rose-400 font-bold">✕</span>
+              <span><strong>Zero Approval Checks:</strong> Any staff member can alter or backdate numbers without manager authorization.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-rose-400 font-bold">✕</span>
+              <span><strong>Fragmented Branches:</strong> Requires manual end-of-day file backups and email exchanges to see total sales.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Next-Gen Side -->
+        <div class="p-6 rounded-2xl border border-emerald-900/40 bg-emerald-950/10">
+          <div class="flex items-center justify-between pb-3 border-b border-emerald-900/30 mb-4">
+            <span class="text-sm font-bold text-emerald-400">Our Next-Gen Platform</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-900/40 text-emerald-300 font-bold uppercase">Safeguards</span>
+          </div>
+          <ul class="space-y-4 text-xs text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>Zero Data Loss Vault:</strong> Every single entry is permanently locked and protected against crashes.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>Unlimited Simultaneous Users:</strong> Hundreds of branch counters can post invoices at the same second with zero lag.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>1-Click Mobile Approvals:</strong> Payments &amp; large purchase orders require manager sign-off before posting.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>Live Multi-Branch Rollup:</strong> Watch company-wide cash, inventory, and net profit live from your phone.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: System Architecture (Block Diagram) -->
+    <section class="slide flex-col justify-center py-2">
+      <div class="text-center max-w-xl mx-auto mb-5">
+        <span class="text-indigo-400 text-xs font-bold uppercase tracking-wider">How It Works</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white headline mt-1">System Architecture (Block Diagram)</h2>
+        <p class="text-slate-400 text-xs mt-1">A 4-tier flow engineered for speed, protection, and complete control.</p>
+      </div>
+
+      <!-- VISUAL 4-BLOCK DIAGRAM -->
+      <div class="max-w-4xl mx-auto w-full flex flex-col gap-3">
+
+        <!-- BLOCK 1 -->
+        <div class="p-4 rounded-xl border border-indigo-500/40 bg-indigo-950/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-extrabold text-sm shrink-0">
+              01
+            </div>
+            <div>
+              <div class="text-xs font-bold text-indigo-300 uppercase tracking-wider">BLOCK 1: Universal Access</div>
+              <h3 class="text-sm font-bold text-white">Simplified Interface &amp; Keyboard Speed</h3>
+            </div>
+          </div>
+          <div class="text-xs text-slate-300 flex flex-wrap gap-x-4 gap-y-1">
+            <span>• <strong>Phones &amp; Tablets</strong> (For Owners)</span>
+            <span>• <strong>Laptops &amp; Terminals</strong> (For Branches)</span>
+            <span>• <strong>Fast Keyboard Hotkeys</strong> (Zero Mouse Needed)</span>
+          </div>
+        </div>
+
+        <!-- CONNECTOR ARROW -->
+        <div class="flex justify-center -my-1 text-indigo-400 font-bold text-xs select-none">
+          ▼ Secure Real-Time Link
+        </div>
+
+        <!-- BLOCK 2 -->
+        <div class="p-4 rounded-xl border border-cyan-500/40 bg-cyan-950/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-cyan-600 text-slate-950 flex items-center justify-center font-extrabold text-sm shrink-0">
+              02
+            </div>
+            <div>
+              <div class="text-xs font-bold text-cyan-300 uppercase tracking-wider">BLOCK 2: Acceleration Engine</div>
+              <h3 class="text-sm font-bold text-white">Lightning-Speed Delivery Layer</h3>
+            </div>
+          </div>
+          <div class="text-xs text-slate-300 flex flex-wrap gap-x-4 gap-y-1">
+            <span>• <strong>Instant Balance Sheets</strong></span>
+            <span>• <strong>Pre-Calculated Numbers</strong></span>
+            <span>• <strong>Zero Loading Spinners</strong></span>
+          </div>
+        </div>
+
+        <!-- CONNECTOR ARROW -->
+        <div class="flex justify-center -my-1 text-cyan-400 font-bold text-xs select-none">
+          ▼ Verified &amp; Screened
+        </div>
+
+        <!-- BLOCK 3 -->
+        <div class="p-4 rounded-xl border border-purple-500/40 bg-purple-950/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-purple-600 text-white flex items-center justify-center font-extrabold text-sm shrink-0">
+              03
+            </div>
+            <div>
+              <div class="text-xs font-bold text-purple-300 uppercase tracking-wider">BLOCK 3: Business Guardrails</div>
+              <h3 class="text-sm font-bold text-white">AI Fraud Checks &amp; Approval Gates</h3>
+            </div>
+          </div>
+          <div class="text-xs text-slate-300 flex flex-wrap gap-x-4 gap-y-1">
+            <span>• <strong>Catches Duplicate Bills</strong></span>
+            <span>• <strong>Flags Suspicious Discounts</strong></span>
+            <span>• <strong>Owner 1-Click Approval</strong></span>
+          </div>
+        </div>
+
+        <!-- CONNECTOR ARROW -->
+        <div class="flex justify-center -my-1 text-purple-400 font-bold text-xs select-none">
+          ▼ Sealed &amp; Stored
+        </div>
+
+        <!-- BLOCK 4 -->
+        <div class="p-4 rounded-xl border border-emerald-500/40 bg-emerald-950/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-600 text-slate-950 flex items-center justify-center font-extrabold text-sm shrink-0">
+              04
+            </div>
+            <div>
+              <div class="text-xs font-bold text-emerald-300 uppercase tracking-wider">BLOCK 4: The Central Vault</div>
+              <h3 class="text-sm font-bold text-white">Permanent Crash-Proof Records</h3>
+            </div>
+          </div>
+          <div class="text-xs text-slate-300 flex flex-wrap gap-x-4 gap-y-1">
+            <span>• <strong>Zero Data Loss Guarantee</strong></span>
+            <span>• <strong>All Branches in One Place</strong></span>
+            <span>• <strong>Automated Daily Backups</strong></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SLIDE 4: Live Business Cockpit -->
+    <section class="slide flex-col justify-center py-2">
+      <div class="text-center max-w-xl mx-auto mb-6">
+        <span class="text-cyan-400 text-xs font-bold uppercase tracking-wider">Decision Control</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white headline mt-1">Live Executive Cockpit</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto w-full">
+        <!-- Control 1 -->
+        <div class="p-5 rounded-xl border border-slate-800 bg-slate-900/60">
+          <div class="text-indigo-400 text-xl font-bold mb-2">⚡</div>
+          <h4 class="text-sm font-bold text-white mb-2">Real-Time Financial Radar</h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li>• <strong>No Month-End Waiting:</strong> See gross margins live right after sales close.</li>
+            <li>• <strong>Receivables Watch:</strong> Automated reminders sent for overdue invoices.</li>
+            <li>• <strong>Mobile Visibility:</strong> Check cash flow anywhere from your smartphone.</li>
+          </ul>
+        </div>
+
+        <!-- Control 2 -->
+        <div class="p-5 rounded-xl border border-slate-800 bg-slate-900/60">
+          <div class="text-purple-400 text-xl font-bold mb-2">🛡️</div>
+          <h4 class="text-sm font-bold text-white mb-2">Fraud &amp; Leakage Prevention</h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li>• <strong>Duplicate Invoice Shield:</strong> Stops double payments to identical vendors.</li>
+            <li>• <strong>Approval Thresholds:</strong> Set rules for expenses above custom limits.</li>
+            <li>• <strong>Tamper-Proof Audit:</strong> Full history of every creation, edit, or cancellation.</li>
+          </ul>
+        </div>
+
+        <!-- Control 3 -->
+        <div class="p-5 rounded-xl border border-slate-800 bg-slate-900/60">
+          <div class="text-emerald-400 text-xl font-bold mb-2">🏢</div>
+          <h4 class="text-sm font-bold text-white mb-2">Frictionless Multi-Branch</h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li>• <strong>One Central System:</strong> No merging files or manual exports between outlets.</li>
+            <li>• <strong>Branch Privacy:</strong> Store managers only view their own store numbers.</li>
+            <li>• <strong>Owner View:</strong> Consolidated overview across all locations in 1 tap.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: 4-Step Risk-Free Transition -->
+    <section class="slide flex-col justify-center py-2 text-center">
+      <div class="max-w-xl mx-auto mb-6">
+        <span class="text-emerald-400 text-xs font-bold uppercase tracking-wider">Implementation Plan</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white headline mt-1">Zero-Disruption Rollout</h2>
+        <p class="text-slate-400 text-xs mt-1">Your existing accounting keeps running with zero downtime.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto w-full text-left mb-8">
+        <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/60">
+          <span class="text-[11px] font-bold text-indigo-400">STAGE 1</span>
+          <div class="font-bold text-white text-xs mt-1">Setup &amp; Import</div>
+          <ul class="mt-2 space-y-1 text-[11px] text-slate-400">
+            <li>• <strong>Import ledgers &amp; stock</strong></li>
+            <li>• <strong>Configure approval rules</strong></li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/60">
+          <span class="text-[11px] font-bold text-cyan-400">STAGE 2</span>
+          <div class="font-bold text-white text-xs mt-1">Fast Entry Trial</div>
+          <ul class="mt-2 space-y-1 text-[11px] text-slate-400">
+            <li>• <strong>Accountants test shortcuts</strong></li>
+            <li>• <strong>Speed verification</strong></li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/60">
+          <span class="text-[11px] font-bold text-purple-400">STAGE 3</span>
+          <div class="font-bold text-white text-xs mt-1">Branch &amp; AI Shield</div>
+          <ul class="mt-2 space-y-1 text-[11px] text-slate-400">
+            <li>• <strong>Connect all outlets</strong></li>
+            <li>• <strong>Turn on fraud guard</strong></li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/60">
+          <span class="text-[11px] font-bold text-emerald-400">STAGE 4</span>
+          <div class="font-bold text-white text-xs mt-1">Parallel Cutover</div>
+          <ul class="mt-2 space-y-1 text-[11px] text-slate-400">
+            <li>• <strong>Run side-by-side</strong></li>
+            <li>• <strong>100% matched accounts</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-2xl border border-indigo-500/30 bg-indigo-950/20 max-w-lg mx-auto">
+        <h4 class="text-white text-sm font-bold">Ready to review the interactive prototype?</h4>
+        <p class="text-slate-400 text-xs mt-1 mb-3">15-minute live preview of keyboard voucher entry and owner approval dashboard.</p>
+        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition shadow-lg shadow-indigo-600/30 cursor-pointer">
+          Schedule Executive Walkthrough
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800 bg-slate-900/90 px-6 py-3 flex items-center justify-between">
+    <div class="text-xs text-slate-500 hidden sm:block">
+      Use <kbd class="px-1.5 py-0.5 bg-slate-800 rounded text-slate-300 font-mono">←</kbd> and <kbd class="px-1.5 py-0.5 bg-slate-800 rounded text-slate-300 font-mono">→</kbd> keys to change slides
+    </div>
+
+    <div class="flex items-center gap-3 ml-auto">
+      <button id="prevBtn" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition disabled:opacity-30 disabled:cursor-not-allowed">
+        Previous
+      </button>
+      <button id="nextBtn" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md shadow-indigo-600/20">
+        Next Slide
+      </button>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const currentSlideNum = document.getElementById('currentSlideNum');
+    const totalSlideNum = document.getElementById('totalSlideNum');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const slideDotsContainer = document.getElementById('slideDots');
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+    let currentIndex = 0;
+
+    totalSlideNum.textContent = slides.length;
+
+    // Build indicator dots
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = `w-2 h-2 rounded-full transition-all ${idx === 0 ? 'bg-indigo-500 w-5' : 'bg-slate-700 hover:bg-slate-600'}`;
+      dot.addEventListener('click', () => updateSlide(idx));
+      slideDotsContainer.appendChild(dot);
+    });
+
+    function updateSlide(index) {
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === index);
+      });
+      currentIndex = index;
+      currentSlideNum.textContent = index + 1;
+
+      const dots = slideDotsContainer.querySelectorAll('button');
+      dots.forEach((dot, idx) => {
+        dot.className = idx === index ? 'w-5 h-2 rounded-full bg-indigo-500 transition-all' : 'w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-600 transition-all';
+      });
+
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slides.length - 1;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) updateSlide(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < slides.length - 1) updateSlide(currentIndex + 1);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        if (currentIndex < slides.length - 1) updateSlide(currentIndex + 1);
+      } else if (e.key === 'ArrowLeft') {
+        if (currentIndex > 0) updateSlide(currentIndex - 1);
+      }
+    });
+
+    fullscreenBtn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    });
+
+    updateSlide(0);
+  </script>
+</body>
+</html>
