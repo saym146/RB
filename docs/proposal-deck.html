@@ -6,11 +6,11 @@
   <title>Executive Briefing: Next-Gen Enterprise Accounting Platform</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Chart.js for Authentic Dashboard Visuals -->
+  <!-- Chart.js for Realistic Cockpit Visuals -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
   
   <script>
@@ -25,7 +25,7 @@
               200: '#fbd0d2',
               300: '#f7aab0',
               400: '#f1747d',
-              500: '#dc3545', // Primary Base
+              500: '#dc3545', // Crimson Base
               600: '#c82333',
               700: '#bd2130',
               800: '#9b1c28',
@@ -42,7 +42,7 @@
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
     .headline { font-family: 'Space Grotesk', sans-serif; }
     .slide { display: none; min-height: calc(100vh - 135px); }
-    .slide.active { display: flex; animation: slideFade 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+    .slide.active { display: flex; animation: slideFade 0.22s cubic-bezier(0.16, 1, 0.3, 1); }
     @keyframes slideFade {
       from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
@@ -59,7 +59,6 @@
 </head>
 <body class="bg-[#0a0d14] text-slate-100 flex flex-col justify-between min-h-screen selection:bg-brand selection:text-white antialiased custom-scrollbar">
 
-  <!-- TOP EXECUTIVE NAVIGATION BAR -->
   <header class="border-b border-slate-800/90 bg-[#111827]/95 backdrop-blur-md px-6 py-3.5 flex items-center justify-between sticky top-0 z-50 shadow-md">
     <div class="flex items-center gap-3.5">
       <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-700 via-brand to-rose-400 flex items-center justify-center font-extrabold text-white text-sm tracking-wider shadow-lg shadow-brand/30">
@@ -68,7 +67,7 @@
       <div>
         <div class="flex items-center gap-2">
           <h1 class="text-xs font-bold uppercase tracking-wider text-slate-100 headline">Executive Briefing</h1>
-          <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand/15 text-brand-300 font-semibold border border-brand/30">Platform Proposal</span>
+          <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand/15 text-brand-300 font-semibold border border-brand/30">Platform Proposal &amp; Rollout</span>
         </div>
         <p class="text-[11px] text-slate-400">Next-Generation Multi-Branch Accounting &amp; Real-Time Financial Governance</p>
       </div>
@@ -77,7 +76,7 @@
     <div class="flex items-center gap-4">
       <div class="flex items-center gap-1.5" id="slideDots"></div>
       <div class="text-xs font-bold text-slate-400 min-w-[55px] text-right font-mono">
-        <span id="currentSlideNum" class="text-brand">1</span> / <span id="totalSlideNum">5</span>
+        <span id="currentSlideNum" class="text-brand">1</span> / <span id="totalSlideNum">6</span>
       </div>
       <button id="fullscreenBtn" title="Toggle Fullscreen" class="p-2 rounded-lg border border-slate-800 bg-[#1f2937]/60 hover:bg-[#1f2937] text-slate-400 hover:text-white transition text-xs">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
@@ -85,7 +84,6 @@
     </div>
   </header>
 
-  <!-- MAIN PRESENTATION CANVAS -->
   <main class="max-w-7xl w-full mx-auto px-3 sm:px-6 py-4 flex-1 flex flex-col justify-center">
 
     <!-- SLIDE 1: STRATEGIC VISION & CORE IMPACT -->
@@ -826,9 +824,162 @@
       </div>
     </section>
 
+    <!-- SLIDE 6: ROLLOUT & IMPLEMENTATION STRATEGY -->
+    <section class="slide flex-col justify-center py-2">
+      <div class="text-center max-w-2xl mx-auto mb-5">
+        <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border border-brand/40 bg-brand/10 text-brand-300 text-xs font-bold uppercase tracking-wider mb-1">
+          <span class="w-2 h-2 rounded-full bg-brand"></span>
+          Non-Disruptive Transition Plan
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white headline">Structured 4-Phase Rollout Strategy</h2>
+        <p class="text-slate-400 text-xs mt-1">Engineered for zero billing downtime, uninterrupted cash flow, and complete business continuity.</p>
+      </div>
+
+      <!-- 4 PHASES HORIZONTAL TIMELINE -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3 max-w-5xl mx-auto w-full mb-4">
+        
+        <!-- PHASE 1 -->
+        <div class="p-4 rounded-xl border border-brand/40 bg-[#111827]/90 relative flex flex-col justify-between shadow-lg shadow-brand/5 hover:border-brand transition">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded bg-brand text-white font-mono font-bold text-[10px] uppercase">Phase 1</span>
+              <span class="text-xs text-slate-400 font-bold">Weeks 1 – 2</span>
+            </div>
+            <h3 class="text-sm font-bold text-white headline">Zero-Risk Parallel Run</h3>
+            <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+              Runs alongside your existing accounting software with zero day-to-day disturbance.
+            </p>
+          </div>
+          <ul class="mt-3 pt-3 border-t border-slate-800 space-y-1.5 text-[11px] text-slate-300">
+            <li class="flex items-start gap-1.5">
+              <span class="text-brand font-bold">•</span>
+              <span><strong>Shadow Posting:</strong> Dual entries verify rupee-to-rupee matching</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-brand font-bold">•</span>
+              <span><strong>Historical Balance Import:</strong> Master ledgers, customer &amp; vendor records loaded</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-brand font-bold">•</span>
+              <span><strong>Zero Interruption:</strong> Existing billing desks operate as usual</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PHASE 2 -->
+        <div class="p-4 rounded-xl border border-slate-800 bg-[#111827]/80 relative flex flex-col justify-between hover:border-brand/40 transition">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono font-bold text-[10px] uppercase">Phase 2</span>
+              <span class="text-xs text-slate-400 font-bold">Weeks 3 – 4</span>
+            </div>
+            <h3 class="text-sm font-bold text-white headline">Pilot Branch Go-Live</h3>
+            <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+              Active launch in a single primary branch (e.g., Kolkata Main Store) to validate staff ergonomics.
+            </p>
+          </div>
+          <ul class="mt-3 pt-3 border-t border-slate-800 space-y-1.5 text-[11px] text-slate-300">
+            <li class="flex items-start gap-1.5">
+              <span class="text-brand font-bold">•</span>
+              <span><strong>Typing Speed Audit:</strong> Confirm zero-mouse speed matches or exceeds old habits</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-brand font-bold">•</span>
+              <span><strong>Approval Tuning:</strong> Adjust owner sign-off thresholds (e.g. ₹50K vs ₹1.0L)</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-brand font-bold">•</span>
+              <span><strong>Staff Certification:</strong> 15-minute onboarding ensures zero pushback</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PHASE 3 -->
+        <div class="p-4 rounded-xl border border-slate-800 bg-[#111827]/80 relative flex flex-col justify-between hover:border-brand/40 transition">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono font-bold text-[10px] uppercase">Phase 3</span>
+              <span class="text-xs text-slate-400 font-bold">Weeks 5 – 6</span>
+            </div>
+            <h3 class="text-sm font-bold text-white headline">Multi-Branch Consolidation</h3>
+            <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+              Full cutover of Mumbai, Delhi, regional warehouses, and head-office management.
+            </p>
+          </div>
+          <ul class="mt-3 pt-3 border-t border-slate-800 space-y-1.5 text-[11px] text-slate-300">
+            <li class="flex items-start gap-1.5">
+              <span class="text-brand font-bold">•</span>
+              <span><strong>Live Central Rollup:</strong> Real-time consolidated Balance Sheet &amp; P&amp;L active</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-brand font-bold">•</span>
+              <span><strong>Mobile Executive App:</strong> Directors approve payments and monitor cash anywhere</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-brand font-bold">•</span>
+              <span><strong>Warehouse Stock Transfers:</strong> Inter-branch stock movements linked seamlessly</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PHASE 4 -->
+        <div class="p-4 rounded-xl border border-emerald-500/40 bg-[#111827]/90 relative flex flex-col justify-between shadow-lg shadow-emerald-500/5 hover:border-emerald-400 transition">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono font-bold text-[10px] uppercase">Phase 4</span>
+              <span class="text-xs text-emerald-400 font-bold">Week 7 Onward</span>
+            </div>
+            <h3 class="text-sm font-bold text-white headline">Automation &amp; AI Guard</h3>
+            <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+              Automated audit radar, fraud blocking, and autonomous scheduled reporting enabled.
+            </p>
+          </div>
+          <ul class="mt-3 pt-3 border-t border-slate-800 space-y-1.5 text-[11px] text-slate-300">
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400 font-bold">•</span>
+              <span><strong>AI Duplicate Interceptor:</strong> Automatic freeze on repeat vendor bill numbers</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400 font-bold">•</span>
+              <span><strong>Margin Erosion Alerts:</strong> Instant warning if billing discounts breach 5%</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400 font-bold">•</span>
+              <span><strong>Autonomous WhatsApp / Email:</strong> Nightly 9 PM cash &amp; sales summary to owners</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- GUARANTEED BUSINESS SAFEGUARDS CONTAINER -->
+      <div class="max-w-5xl mx-auto w-full p-4 rounded-xl border border-brand/30 bg-gradient-to-r from-brand/10 via-[#111827] to-slate-900 shadow-md">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-6 h-6 rounded-md bg-brand text-white flex items-center justify-center font-bold text-xs">
+            ✓
+          </div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Guaranteed Business Safeguards &amp; Zero-Risk Commitments</h4>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
+          <div class="p-2.5 rounded-lg bg-[#0b0e17]/80 border border-slate-800">
+            <div class="font-bold text-white mb-0.5">1. Instant 1-Click Fallback</div>
+            <p class="text-[11px] text-slate-400">At any moment during parallel run, export 100% of data back to traditional formats with one keystroke.</p>
+          </div>
+          <div class="p-2.5 rounded-lg bg-[#0b0e17]/80 border border-slate-800">
+            <div class="font-bold text-white mb-0.5">2. Zero Staff Pushback</div>
+            <p class="text-[11px] text-slate-400">Exact keyboard shortcut replication (<kbd class="px-1 py-0.2 bg-slate-800 rounded font-mono text-[9px]">Enter</kbd>, <kbd class="px-1 py-0.2 bg-slate-800 rounded font-mono text-[9px]">Esc</kbd>, <kbd class="px-1 py-0.2 bg-slate-800 rounded font-mono text-[9px]">Ctrl+A</kbd>) prevents any decline in accounting productivity.</p>
+          </div>
+          <div class="p-2.5 rounded-lg bg-[#0b0e17]/80 border border-slate-800">
+            <div class="font-bold text-white mb-0.5">3. 100% Data Integrity Guarantee</div>
+            <p class="text-[11px] text-slate-400">Continuous cloud replication guarantees that no sudden power loss or hardware failure will ever destroy a voucher.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- BOTTOM NAVIGATION BAR -->
   <footer class="border-t border-slate-800/90 bg-[#111827]/95 px-6 py-3 flex items-center justify-between">
     <div class="text-xs text-slate-500 hidden sm:block">
       Navigate with <kbd class="px-1.5 py-0.5 bg-[#1f2937] rounded text-slate-300 font-mono text-[11px] border border-slate-700">←</kbd> and <kbd class="px-1.5 py-0.5 bg-[#1f2937] rounded text-slate-300 font-mono text-[11px] border border-slate-700">→</kbd> keys
